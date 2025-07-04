@@ -1,0 +1,43 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Output
+dist/
+build/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env/config
+.env
+.env.local
+.env.*.local
+
+# IDEs/editors
+.vscode/
+.idea/
+*.sw?
+
+# Optional: schema tooling
+*.generated.ts
+*.d.ts
+
+# Optional: coverage/testing
+coverage/
+.jest/
+.nyc_output/
+
+# Optional: compiled JSON schema cache
+*.compiled.schema.json
