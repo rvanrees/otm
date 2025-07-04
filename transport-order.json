@@ -23,6 +23,9 @@
                 "value": 700,
                 "unit": "kg"
               },
+              "loadingMeter": {
+                "value": 0.4
+              },
               "packagingMaterial": "EURO",
               "packagingType": "pallet",
               "constraint": {
