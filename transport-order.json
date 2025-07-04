@@ -1,0 +1,182 @@
+{
+  "id": "38659976-8ac8-466c-829a-5899b6e3b281",
+  "externalAttributes": {
+    "transportOrderId": "1337"
+  },
+  "description": "Example of a transport order for a shipment of bottled water from Belgium to the Netherlands.",
+  "consignments": [
+    {
+      "entity": {
+        "id": "2613af0a-12e5-4231-8320-306959fcc9d0",
+        "status": "accepted",
+        "goods": [
+          {
+            "entity": {
+              "id": "dd872a0d-b4f8-4aaf-946f-97142e6e4704",
+              "name": "Bottles of water",
+              "description": "Euro pallet with 1296 bottles of water (0.5L)",
+              "externalAttributes": {
+                "productId": "1234567890"
+              },
+              "quantity": 33,
+              "weight": {
+                "value": 700,
+                "unit": "kg"
+              },
+              "packagingMaterial": "EURO",
+              "packagingType": "pallet",
+              "constraint": {
+                "entity": {
+                  "id": "af061b25-be4b-4716-aec8-92189949f9a0",
+                  "value": {
+                    "sensorValueConstraintType": "range",
+                    "maximum": {
+                      "value": 10,
+                      "unit": "C"
+                    },
+                    "minimum": {
+                      "value": 5,
+                      "unit": "C"
+                    },
+                    "type": "sensorValueConstraint"
+                  }
+                },
+                "associationType": "inline"
+              },
+              "type": "items"
+            },
+            "associationType": "inline"
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "entity": {
+        "id": "7611fa71-3ba8-46ce-bec9-911177c8b342",
+        "location": {
+          "uuid": "bc1b7871-741c-401f-80e7-6d586f05ff2e",
+          "entityType": "location",
+          "associationType": "reference"
+        },
+        "startTime": "2025-11-15T07:00:00Z",
+        "endTime": "2025-11-15T08:00:00Z",
+        "actionType": "load"
+      },
+      "associationType": "inline"
+    },
+    {
+      "entity": {
+        "id": "ab3993b6-e505-41cf-a22e-b8e86f543378",
+        "location": {
+          "uuid": "15e97daf-96d9-41c1-a6e2-5479a5ad4df4",
+          "entityType": "location",
+          "associationType": "reference"
+        },
+        "startTime": "2025-11-15T08:00:00Z",
+        "endTime": "2025-11-15T17:00:00Z",
+        "actionType": "unload"
+      },
+      "associationType": "inline"
+    }
+  ],
+  "actors": [
+    {
+      "entity": {
+        "id": "bc1b7871-741c-401f-80e7-6d586f05ff2e",
+        "name": "De Koninginnebron",
+        "contactDetails": [
+          {
+            "value": "0612345678",
+            "type": "phone"
+          },
+          {
+            "value": "info@koninginnebron.be",
+            "type": "email"
+          }
+        ],
+        "locations": [
+          {
+            "entity": {
+              "id": "396e6376-151d-4d25-acea-2b83c8942f0f",
+              "geoReference": {
+                "lat": 52.4086838,
+                "lon": 6.5538459,
+                "type": "latLonPointGeoReference"
+              },
+              "administrativeReference": {
+                "name": "De Koninginnebron",
+                "street": "Chem. des Fontaines",
+                "houseNumber": "1",
+                "postalCode": "4900",
+                "city": "Spa",
+                "country": "BE"
+              }
+            },
+            "associationType": "inline"
+          }
+        ]
+      },
+      "roles": ["shipper"],
+      "associationType": "inline"
+    },
+    {
+      "entity": {
+        "id": "15e97daf-96d9-41c1-a6e2-5479a5ad4df4",
+        "name": "De Pier Scheveningen",
+        "contactDetails": [
+          {
+            "value": "0610386859",
+            "type": "phone"
+          }
+        ],
+        "locations": [
+          {
+            "entity": {
+              "id": "cfd7a55d-91df-449f-8f69-08b4758bdec8",
+              "geoReference": {
+                "lat": 52.1157803,
+                "lon": 4.2801394,
+                "type": "latLonPointGeoReference"
+              },
+              "administrativeReference": {
+                "name": "De Pier Scheveningen",
+                "street": "Strandweg",
+                "houseNumber": "150",
+                "postalCode": "2586 JW",
+                "city": "Den Haag",
+                "country": "NL"
+              }
+            },
+            "associationType": "inline"
+          }
+        ]
+      },
+      "roles": ["receiver"],
+      "associationType": "inline"
+    },
+    {
+      "entity": {
+        "id": "cfd7a55d-91df-449f-8f69-08b4758bdec8",
+        "name": "Interlogic B.V.",
+        "contactDetails": [
+          {
+            "value": "Interlogic B.V.",
+            "type": "name"
+          },
+          {
+            "value": "0546898965",
+            "type": "phone"
+          },
+          {
+            "value": "planning@inter-logic.eu",
+            "type": "email"
+          }
+        ]
+      },
+      "roles": ["carrier"],
+      "associationType": "inline"
+    }
+  ]
+}
